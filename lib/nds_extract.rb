@@ -100,14 +100,12 @@ def movies_with_directors_set(source)
 
     i2=0 # each movie
     while i2 < source[i][:movies].length
-      puts source[i][:movies][i2]
-      # movie_with_director_name(dir_name, test)
-      arr_out << movie_with_director_name(dir_name, source[i][:movies][i2])
+      arr_out << movies_with_director_key(dir_name, source[i][:movies])
       i2 += 1
     end
     i += 1
   end
-  [arr_out]
+  arr_out
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
   # INPUT:
